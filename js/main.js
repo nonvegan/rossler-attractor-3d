@@ -61,23 +61,23 @@ function main(evt) {
 
   function animate() {
     if (i < MAX_GEN_POINTS) {
-      for (let I = 0; I < 5; I++) {
+      for (let I = 0; I < 4; I++) {
         update();
       }
+      const geometry = new LineGeometry();
+      geometry.setPositions(positions);
+      geometry.setColors(colors);
+      const matLine = new LineMaterial({
+        linewidth: 3,
+        vertexColors: true,
+      });
+      scene.clear();
+      scene.add(new Line2(geometry, matLine));
+      matLine.resolution.set(width, height);
+      orbitControls.update();
     }
-    const geometry = new LineGeometry();
-    geometry.setPositions(positions);
-    geometry.setColors(colors);
-    const matLine = new LineMaterial({
-      linewidth: 3,
-      vertexColors: true,
-    });
-    scene.clear();
-    scene.add(new Line2(geometry, matLine));
-    orbitControls.update();
     renderer.setClearColor(0x000000, 0);
     renderer.setViewport(0, 0, width, height);
-    matLine.resolution.set(width, height);
     renderer.render(scene, camera);
     requestAnimationFrame(animate);
   }
