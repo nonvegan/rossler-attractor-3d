@@ -3,8 +3,6 @@ import { LineGeometry } from "https://threejs.org/examples/jsm/lines/LineGeometr
 import { LineMaterial } from "https://threejs.org/examples/jsm/lines/LineMaterial.js";
 import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
 import { Line2 } from "https://threejs.org/examples/jsm/lines/Line2.js";
-import { mapValue, restrain } from "./helpers.js";
-import {} from "./classes.js";
 
 window.addEventListener("load", main, false);
 
