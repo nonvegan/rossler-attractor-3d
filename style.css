@@ -32,6 +32,7 @@
         background-color: #282c34;
         border: 0.3rem solid #ae81ff;
         border-radius: 0.5rem;
+        cursor: pointer;
     }
 
     div {
